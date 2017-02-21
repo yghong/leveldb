@@ -45,6 +45,13 @@ case "$TARGET_OS" in
         PLATFORM_SHARED_LDFLAGS="-dynamiclib -install_name "
         PORT_FILE=port/port_posix.cc
         ;;
+    IOS)
+        PLATFORM="$TARGET_OS"
+        COMMON_FLAGS="-fno-builtin-memcmp -DOS_MACOSX -fPIC -fvisibility=hidden -Wno-tautological-compare"
+        PLATFORM_SHARED_EXT=
+        PLATFORM_LDFLAGS=
+        PORT_FILE=port/port_posix.cc
+        ;;
     Linux)
         PLATFORM=OS_LINUX
         COMMON_FLAGS="-fno-builtin-memcmp -pthread -DOS_LINUX"

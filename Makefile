@@ -159,19 +159,20 @@ ifeq ($(PLATFORM), IOS)
 SIMULATORROOT=/Developer/Platforms/iPhoneSimulator.platform/Developer
 DEVICEROOT=/Developer/Platforms/iPhoneOS.platform/Developer
 IOSVERSION=$(shell defaults read /Developer/Platforms/iPhoneOS.platform/version CFBundleShortVersionString)
+AR=xcrun ar
 
 .cc.o:
 	mkdir -p ios-x86/$(dir $@)
-	$(SIMULATORROOT)/usr/bin/$(CXX) $(CXXFLAGS) -isysroot $(SIMULATORROOT)/SDKs/iPhoneSimulator$(IOSVERSION).sdk -arch i686 -c $< -o ios-x86/$@
+	xcrun -sdk iphonesimulator c++ $(CXXFLAGS) -arch i386 -arch x86_64 -miphonesimulator-version-min=8.0 -std=c++11 -stdlib=libc++ -c $< -o ios-x86/$@
 	mkdir -p ios-arm/$(dir $@)
-	$(DEVICEROOT)/usr/bin/$(CXX) $(CXXFLAGS) -isysroot $(DEVICEROOT)/SDKs/iPhoneOS$(IOSVERSION).sdk -arch armv6 -arch armv7 -c $< -o ios-arm/$@
+	xcrun -sdk iphoneos c++ $(CXXFLAGS) -arch arm64 -arch armv7 -arch armv7s -miphoneos-version-min=8.0 -std=c++11 -stdlib=libc++ -c $< -o ios-arm/$@
 	lipo ios-x86/$@ ios-arm/$@ -create -output $@
 
 .c.o:
 	mkdir -p ios-x86/$(dir $@)
-	$(SIMULATORROOT)/usr/bin/$(CC) $(CFLAGS) -isysroot $(SIMULATORROOT)/SDKs/iPhoneSimulator$(IOSVERSION).sdk -arch i686 -c $< -o ios-x86/$@
+	xcrun -sdk iphonesimulator cc $(CFLAGS) -arch i386 -arch x86_64 -miphonesimulator-version-min=8.0 -c $< -o ios-x86/$@
 	mkdir -p ios-arm/$(dir $@)
-	$(DEVICEROOT)/usr/bin/$(CC) $(CFLAGS) -isysroot $(DEVICEROOT)/SDKs/iPhoneOS$(IOSVERSION).sdk -arch armv6 -arch armv7 -c $< -o ios-arm/$@
+	xcrun -sdk iphoneos cc $(CFLAGS) -arch arm64 -arch armv7 -arch armv7s -miphoneos-version-min=8.0 -c $< -o ios-arm/$@
 	lipo ios-x86/$@ ios-arm/$@ -create -output $@
 
 else
