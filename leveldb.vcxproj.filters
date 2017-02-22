@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="db\builder.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\c.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_iter.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\dbformat.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\filename.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\log_reader.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\log_writer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\memtable.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\repair.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\table_cache.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\version_edit.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\version_set.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\write_batch.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\block.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\block_builder.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\format.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\iterator.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\merger.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\table.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\table_builder.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="table\two_level_iterator.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\arena.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\cache.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\coding.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\comparator.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\crc32c.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\env.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\hash.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\histogram.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\logging.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\options.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\status.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="port\port_win.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util\env_win.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="port\port_win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\leveldb\env.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="port\port.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="port\atomic_pointer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
