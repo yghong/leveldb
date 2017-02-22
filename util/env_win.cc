@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file. See the AUTHORS file for names of contributors.
 
+#ifdef LEVELDB_PLATFORM_WINDOWS
+
 #include <io.h>
 #include <fcntl.h>
 #include <mutex>
@@ -664,5 +666,6 @@ Env* Env::Default() {
 	return _theEnv;
 }
 
-
 _NS_LEVELDB_END_
+
+#endif //#ifdef LEVELDB_PLATFORM_WINDOWS
